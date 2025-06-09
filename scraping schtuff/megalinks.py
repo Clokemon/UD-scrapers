@@ -2,7 +2,7 @@ import requests  # type: ignore
 from bs4 import BeautifulSoup  # type: ignore
 import os
 
-alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXY"
+alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXY*"
 alphabetToPageNo = {}
 
 i = input("Enter the letter you want to scrape (A-Z): ").upper()
