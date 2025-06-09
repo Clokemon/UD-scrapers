@@ -2,7 +2,7 @@ import requests  # type: ignore
 from bs4 import BeautifulSoup  # type: ignore
 import os
 
-alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ*"
 for i in alphabet:
     with open ("mini_scraped_links" + i + ".txt", "r") as f:
         with open ("mini_scraped_material" + i + ".txt", "x") as f2:

@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup  # type: ignore
 import os
 import random
 
-alphabetAgain = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+alphabetAgain = "ABCDEFGHIJKLMNOPQRSTUVWXYZ*"
 alphabet = list(alphabetAgain)
 
 t = 1
