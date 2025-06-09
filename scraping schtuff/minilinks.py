@@ -18,7 +18,6 @@ for i in alphabet:
     f = open("mini_scraped_links" + i +".txt", "x")
     with open("mini_scraped_links" + i +".txt", "a") as f:
         t = 0
-        f.write("https://www.urbandictionary.com/browse.php?character=" + i + "\n")
         while True:
             t += 1
             r = requests.get("https://www.urbandictionary.com/browse.php?character=" + i +"&page=" + str(t))
