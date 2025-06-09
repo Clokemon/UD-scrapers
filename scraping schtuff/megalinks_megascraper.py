@@ -4,8 +4,8 @@ import os
 
 alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 for i in alphabet:
-    with open ("mini_scraped_links" + i + ".txt", "r") as f:
-        with open ("mini_scraped_material" + i + ".txt", "x") as f2:
+    with open ("mega_scraped_links" + i + ".txt", "r") as f:
+        with open ("mega_scraped_material" + i + ".txt", "x") as f2:
             for line in f:
                 r = requests.get(line.strip())
                 soup = BeautifulSoup(r.content, "html.parser")
