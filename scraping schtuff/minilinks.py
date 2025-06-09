@@ -2,6 +2,7 @@ import requests  # type: ignore
 from bs4 import BeautifulSoup  # type: ignore
 import os
 import random
+
 alphabetAgain = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 alphabet = list(alphabetAgain)
 
@@ -28,7 +29,6 @@ for i in alphabet:
                 break
             for j in content:
                 f.write("https://www.urbandictionary.com" + j['href'] + "&page=" + str(1) + "\n")
-                if (random.randint(0, 1) == 0):
-                    print("https://www.urbandictionary.com" + j['href'] + "&page=" + str(1) + "\n")
+                print("https://www.urbandictionary.com" + j['href'] + "&page=" + str(1) + "\n")
                 
-print("done")
+print("Done scraping mini links!")
