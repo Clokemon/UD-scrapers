@@ -13,6 +13,8 @@ for i in alphabet:
                 content = soup.find_all('div', class_="break-words meaning mb-4")
                 content2 = soup.find_all('div', class_="break-words example italic mb-4")
                 for j in content:
-                    f2.write(j.text + "\n")
+                    clean_text = j.text.encode("ascii", "ignore").decode("ascii")
+                    f2.write(clean_text + "\n")
                 for j in content2:
-                    f2.write(j.text + "\n")
+                    clean_text = j.text.encode("ascii", "ignore").decode("ascii")
+                    f2.write(clean_text + "\n")
