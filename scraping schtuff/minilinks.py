@@ -8,17 +8,18 @@ alphabet = list(alphabetAgain)
 
 t = 1
 
-for i in alphabet:
-    if os.path.exists("mini_scraped_links" + i + ".txt"):
-        alphabet.pop(alphabetAgain.find(i))
+for _ in range(len(alphabet)):
+    if os.path.exists("mini_scraped_links" + alphabet[0] + ".txt"):
+        alphabet.pop(alphabetAgain.find(alphabet[0]))
         alphabetAgain = "".join(alphabet)
-        print("File mini_scraped_links" + i + ".txt already exists, skipping...")
+        print("File mini_scraped_links" + alphabet[0] + ".txt already exists, skipping...")
 
 for i in alphabet:
     f = open("mini_scraped_links" + i +".txt", "x")
     with open("mini_scraped_links" + i +".txt", "a") as f:
         t = 0
         while True:
+            os.system('cls')
             t += 1
             r = requests.get("https://www.urbandictionary.com/browse.php?character=" + i +"&page=" + str(t))
             soup = BeautifulSoup(r.content, "html.parser")
